@@ -26,7 +26,7 @@ This sample angular app is to display the practice of key Angular >2 features an
 
 * [```Observables/RxJS```](https://angular.io/guide/observables) - All of the app's data services are built as an Observiable. By doing this we can subscribe to these and update our views in real time. This sample also displays the usage of the http service, which also returns an Observable. [```Sample```](https://github.com/priskz/sample-angular-app/blob/master/app/angular/web/src/app/core/service/news.ts) 
 
-* Asynchronous Pipes - Since our data sevices are built around Observable sources, we can easily take advantage of the Async pipe to display our data. This works amazing for real time updates. Utilzing these pipes help keep our component logic clean and sleek since it has unsubcibe/subscribe functionality built in to the pipe. [```Sample```](https://github.com/priskz/sample-angular-app/blob/master/app/angular/web/src/app/home/home.component.html) 
+* [```Asynchronous Pipes```](https://angular.io/guide/pipes#pure-and-impure-pipes) - Since our data sevices are built around Observable sources, we can easily take advantage of the Async pipe to display our data. This works amazing for real time updates. Utilzing these pipes help keep our component logic clean and sleek since it has unsubcibe/subscribe functionality built in to the pipe. [```Sample```](https://github.com/priskz/sample-angular-app/blob/master/app/angular/web/src/app/home/home.component.html) 
 
 ## Sample [```Modules```](https://angular.io/guide/ngmodules)
 
@@ -49,6 +49,9 @@ This sample angular app is to display the practice of key Angular >2 features an
 * [```Generic```](https://github.com/priskz/sample-angular-app/tree/master/app/angular/web/src/app/generic) - Houses generic functionality that may be used for extension.
 
 * [```Domain```](https://github.com/priskz/sample-angular-app/tree/master/app/angular/web/src/app/domain) - Houses and provides an interface for the domian's different Models/Objects used throughout the app.
+
+## Other
+
 
 
 ## Disclaimer
