@@ -59,8 +59,6 @@ export class NewsService extends BaseService
         .subscribe(
             payload => {
 
-              console.log(payload);
-
               if(payload.status == 'ok')
               {
                 let items = null;
@@ -71,7 +69,7 @@ export class NewsService extends BaseService
                 // Update data.
                 this._data.next(List(items));
               }
-              console.log(this._data);
+
               // Update status.
               this._status.next('ready');
       },
