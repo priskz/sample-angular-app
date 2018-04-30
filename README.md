@@ -53,7 +53,8 @@ This sample angular app is to display the practice of key Angular >2 features an
 ## Other
 
 
-
 ## Disclaimer
 
-This sample code was put together very quickly in hopes of displaying knowledge on the subject matter of practical Angular >2 usage and applied architectural concepts. While this application should be functional, it is currently dependent upon a 3rd party API, some mock code, and zero unit testing.
+This sample code was put together very quickly in hopes of displaying knowledge on the subject matter of practical Angular >2 usage and applied architectural concepts. While this application should be functional, it is currently dependent upon an unfiltered 3rd party API, some mock code, and zero unit testing. Specifically, some image links may be broken due to SSL issues, but the concepts/samples of the code should present themself appropriately.
+
+Here is a link to a "running/working" stackblitz of this project: [```https://angular-he6omf.stackblitz.io/```](https://angular-he6omf.stackblitz.io/)
