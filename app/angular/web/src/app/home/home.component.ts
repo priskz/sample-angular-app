@@ -21,7 +21,11 @@ export class HomeComponent
 
   }
 
-  //
+  /**
+   * Perform complex initializations shortly after construction and
+   * set up the component after Angular sets the input properties.
+   * @returns void
+   */
   ngOnInit()
   {
     this.news.load({page: 1, pageSize: 20});
