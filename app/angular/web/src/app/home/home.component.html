@@ -1,0 +1,67 @@
+<ng-template #loadingArticles>
+  <mat-progress-bar class="loading-articles" mode="query"></mat-progress-bar>
+</ng-template>
+<ng-container *ngIf="(news.data$ | async) as articles; else loadingArticles">
+  <div class="bounds" fxLayout="column" fxLayoutAlign="space-between center">
+    <div class="section" fxLayout="row" fxLayoutGap="10px" fxLayout.xs="column" fxLayout.sm="column">
+      <ng-container *ngFor="let article of articles; let i=index;">
+        <mat-card fxFlex="grow" *ngIf="i < 1">
+          <img mat-card-image src="{{article.urlToImage}}" alt="headline">
+          <mat-card-header>
+            <mat-card-title>
+              <h2>{{article.title}}</h2>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{article.description}} <a href="{{article.url}}" target="_blank">More...</a></p>
+          </mat-card-content>
+        </mat-card>
+      </ng-container>
+      <mat-card fxFlex class="headline-tab-card">
+        <mat-card-content>
+          <mat-tab-group>
+            <mat-tab label="News">
+              <mat-list>
+                <ng-container *ngFor="let article of articles; let i=index;">
+                  <ng-container [ngSwitch]="article.title">
+                    <ng-container *ngSwitchCase="''"></ng-container>
+                    <ng-container *ngSwitchDefault>
+                      <mat-list-item *ngIf="i > 0 && i < 15">
+                        <h4 mat-line>
+                          <a href="{{article.url}}" target="_blank">{{article.title}}</a>
+                        </h4>
+                      </mat-list-item>
+                    </ng-container>
+                  </ng-container>
+                </ng-container>
+              </mat-list>
+            </mat-tab>
+          </mat-tab-group>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="section" fxLayout="row" fxLayoutGap="10px" fxLayout.xs="column" fxLayout.sm="column">
+      <ng-container *ngFor="let article of articles; let i=index;">
+        <mat-card fxFlex="25" class="trending-card" *ngIf="i > 0 && i < 5">
+          <ng-container [ngSwitch]="article.urlToImage">
+              <img *ngSwitchCase="null" mat-card-image src="/assets/no-image.png" alt="headline">
+              <img *ngSwitchDefault mat-card-image src="{{article.urlToImage}}" alt="headline">
+          </ng-container>
+          <mat-card-title>
+            <h4>{{article.title}}</h4>
+          </mat-card-title>
+          <mat-card-subtitle>By {{article.author}}</mat-card-subtitle>
+          <mat-card-content>
+            <p>{{article.description}}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <a mat-button href="{{article.url}}" target="_blank">More...</a>
+          </mat-card-actions>
+        </mat-card>
+      </ng-container>
+    </div>
+    <div class="section" fxLayout="row" fxLayoutAlign="center start">
+      <p>Powered by <a href="https://newsapi.org/">NewsAPI.org</a></p>
+    </div>
+  </div>
+</ng-container>

@@ -1,0 +1,14 @@
+.bounds {
+  max-width: 1240px;
+}
+
+.section {
+  max-width: 1240px;
+  margin-top: 10px;
+}
+
+.headline-tab-card {
+  background-color: #fff;
+  padding: 0px 0px 0px 0px;
+  min-width: 390px;
+}

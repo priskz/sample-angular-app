@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>
+      <a mat-button [routerLink]="['']">Home</a>
+    </span>
+    <span class="spacer"></span>
+    <div>
+      <ng-container *ngFor="let page of pages">
+        <a mat-button (click)="setPage(page)">Page {{page}}</a>
+      </ng-container>
+    </div>
+    <div *ngIf="me.data$ | async as me" fxFlex="grow" fxLayoutAlign="end center">
+      <button *ngIf="!me.guest" mat-button [matMenuTriggerFor]="meMenu">Hello, {{me.username}}!</button>
+      <mat-menu #meMenu="matMenu">
+        <button mat-menu-item [routerLink]="['/account']">Account</button>
+        <button mat-menu-item (click)="logout()">Log Out</button>
+      </mat-menu>
+      <a *ngIf="me.guest" mat-button [routerLink]="['auth/login']">Login</a>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,20 @@
+<form [formGroup]="detailsForm" (ngSubmit)="onSubmit()">
+  <div class="bounds" fxLayout="column" fxLayoutAlign="center center">
+    <mat-form-field>
+      <input matInput placeholder="Username" formControlName="username">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="First Name" formControlName="first_name">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Last Name" formControlName="last_name">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Password" type="password" formControlName="password">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Confirm Password" type="password" formControlName="password_confirmation">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="detailsForm.invalid">Update</button>
+  </div>
+</form>
