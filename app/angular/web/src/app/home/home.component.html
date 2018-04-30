@@ -6,7 +6,7 @@
     <div class="section" fxLayout="row" fxLayoutGap="10px" fxLayout.xs="column" fxLayout.sm="column">
       <ng-container *ngFor="let article of articles; let i=index;">
         <mat-card fxFlex="grow" *ngIf="i < 1">
-          <img mat-card-image src="{{article.urlToImage.replace('http://', '//').replace('https://', '//')}}" alt="headline">
+          <img mat-card-image src="/assets/no-image.png" alt="headline">
           <mat-card-header>
             <mat-card-title>
               <h2>{{article.title}}</h2>
@@ -43,9 +43,9 @@
     <div class="section" fxLayout="row" fxLayoutGap="10px" fxLayout.xs="column" fxLayout.sm="column">
       <ng-container *ngFor="let article of articles; let i=index;">
         <mat-card fxFlex="25" class="trending-card" *ngIf="i > 0 && i < 5">
-          <ng-container [ngSwitch]="article.urlToImage.replace('http://', '//').replace('https://', '//')">
+          <ng-container [ngSwitch]="article.urlToImage">
               <img *ngSwitchCase="null" mat-card-image src="/assets/no-image.png" alt="headline">
-              <img *ngSwitchDefault mat-card-image src="{{article.urlToImage.replace('http://', '//').replace('https://', '//')}}" alt="headline">
+              <img *ngSwitchDefault mat-card-image src="/assets/no-image.png" alt="headline">
           </ng-container>
           <mat-card-title>
             <h4>{{article.title}}</h4>
