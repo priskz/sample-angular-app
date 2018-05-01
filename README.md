@@ -4,16 +4,6 @@
 
 This sample angular app is to display the practice of key Angular >2 features and applied architectural concepts.
 
-## 3rd Party Usages
-
-* [```Angular Material```](https://material.angular.io/) - A library of UI components following the material design spec.
-
-* [```Immuatable.js```](https://facebook.github.io/immutable-js/) - A library for easily enforcing immutabilty.
-
-* [```NewsAPI.org```](https://newsapi.org/) - A news API for pulling in some real data.
-
-* [```ng2 Charts```](https://github.com/valor-software/ng2-charts) - Native Angular components built for the [```Chart.js```](https://www.chartjs.org/) library. Note: This is not currently on display.
-
 ## Concepts
 
 * [```Service Oreinted Architecture (SOA)```](https://en.wikipedia.org/wiki/Service-oriented_architecture) - All app service's are Injectable, which allows for easy Dependency Injection from within the components that need to use them. [```Service Sample```](https://github.com/priskz/sample-angular-app/blob/master/app/angular/web/src/app/core/service/news.ts) [```Usage Sample```](https://github.com/priskz/sample-angular-app/blob/master/app/angular/web/src/app/home/home.component.ts)
@@ -34,7 +24,7 @@ This sample angular app is to display the practice of key Angular >2 features an
 
 * [```Auth```](https://github.com/priskz/sample-angular-app/tree/master/app/angular/web/src/app/auth) - This generic module would talk to an API and be utilized for authenticating a user. Mocked functionality.
 
-* [```Core```](https://github.com/priskz/sample-angular-app/tree/master/app/angular/web/src/app/core) - This module houses all of the core service's utilized by this app.
+* [```Core```](https://github.com/priskz/sample-angular-app/tree/master/app/angular/web/src/app/core) - This module houses and makes available all of the core service's utilized by this app.
 
 * [```Home```](https://github.com/priskz/sample-angular-app/tree/master/app/angular/web/src/app/home) - This generic module is essentially the app's home page.
 
@@ -49,6 +39,16 @@ This sample angular app is to display the practice of key Angular >2 features an
 * [```Generic```](https://github.com/priskz/sample-angular-app/tree/master/app/angular/web/src/app/generic) - Houses generic functionality that may be used for extension.
 
 * [```Domain```](https://github.com/priskz/sample-angular-app/tree/master/app/angular/web/src/app/domain) - Houses and provides an interface for the domian's different Models/Objects used throughout the app.
+
+## 3rd Party Uses
+
+* [```Angular Material```](https://material.angular.io/) - A library of UI components following the material design spec.
+
+* [```Immuatable.js```](https://facebook.github.io/immutable-js/) - A library for easily enforcing immutabilty.
+
+* [```NewsAPI.org```](https://newsapi.org/) - A news API for pulling in some real data.
+
+* [```ng2 Charts```](https://github.com/valor-software/ng2-charts) - Native Angular components built for the [```Chart.js```](https://www.chartjs.org/) library. Note: This is not currently on display.
 
 ## Disclaimer
 
