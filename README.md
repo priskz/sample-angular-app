@@ -54,4 +54,4 @@ This sample angular app is to display the practice of key Angular >2 features an
 
 This sample code was put together very quickly in hopes of displaying knowledge on the subject matter of practical Angular >2 usage and applied architectural concepts. While this application should be "functional", it is currently dependent upon direct access to a 3rd party API, some mock code, and zero unit testing. 
 
-Here is a link to a "running/working" stackblitz of this project: [```https://angular-he6omf.stackblitz.io/```](https://angular-he6omf.stackblitz.io/)
+Here is a link to a "running/working" version of this project: [```https://priskz.com/```](https://priskz.com/)
